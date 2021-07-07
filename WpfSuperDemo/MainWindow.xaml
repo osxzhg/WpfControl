@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WpfSuperDemo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="RootLayout">
+    <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -40,6 +40,7 @@
         </ComboBox>
         <Button x:Name="submitButton" Content="Run Me" Grid.Column="1"
             Grid.Row="4" Grid.ColumnSpan="2" Margin="10" Click="submitButton_Click"/>
+        <StackPanel x:Name="RootLayout" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"></StackPanel>
         <Image Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" Source="C:\Users\osxzh\Pictures\IMG_1006.jpg" />
     </Grid>
 </Window>
