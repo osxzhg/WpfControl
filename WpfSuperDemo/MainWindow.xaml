@@ -42,10 +42,10 @@
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                    <Image Source="C:\Users\osxzh\Pictures\IMG_1006.jpg" Height="20" Width="20"/>
-                    <TextBlock Text="{Binding FirstName}" />
-                    <TextBlock Text=" " />
-                    <TextBlock Text="{Binding LastName}" />
+                        <Image Source="C:\Users\osxzh\Pictures\IMG_1006.jpg" Height="20" Width="20"/>
+                        <TextBlock Text="{Binding FirstName}" />
+                        <TextBlock Text=" " />
+                        <TextBlock Text="{Binding LastName}" />
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
@@ -75,7 +75,7 @@
             <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\osxzh\Pictures\oo_206.jpg" />
             <Image MaxHeight="200" MaxWidth="200" Source="C:\Users\osxzh\Pictures\oo_207.jpg"  />
         </WrapPanel>-->
-        <StackPanel Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" >
+        <!--<StackPanel Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" >
             <WrapPanel Orientation="Horizontal">
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type Button}">
@@ -90,6 +90,11 @@
                 <Button Content="test4" />
                 <Button Content="test5" />
             </WrapPanel>
+        </StackPanel>-->
+        <StackPanel Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" Orientation="Horizontal" VerticalAlignment="Top" >
+            <Label>Customer name:</Label>
+            <TextBox Text="{Binding Customer.Name, UpdateSourceTrigger=PropertyChanged}" Width="136"/>
+            <Button Command="{Binding UpdateCommand}">Update</Button>
         </StackPanel>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfSuperDemo.ViewModels;
 
 namespace WpfSuperDemo
 {
@@ -24,6 +25,7 @@ namespace WpfSuperDemo
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new CustomerViewModel();
             people.Add(new Person { FirstName = "Tim", LastName = "Corey" });
             people.Add(new Person { FirstName = "Joe", LastName = "Smith" });
             people.Add(new Person { FirstName = "Sue", LastName = "Storm" });
